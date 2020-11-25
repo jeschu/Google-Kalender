@@ -46,11 +46,6 @@
           { role: 'minimize' },
           { role: 'close' }
         ]
-      }, {
-        role: 'help',
-        submenu: [
-          { label: require('electron').app.getVersion(), click() { require('electron').shell.openExternal('https://github.com/klinker24/google-calendar-desktop') } },
-        ]
       }]
   
       if (process.platform === 'darwin') {
@@ -77,7 +72,7 @@
         )
   
         // Windows menu
-        template[4].submenu = [
+        template[2].submenu = [
           { label: 'Close', accelerator: 'CmdOrCtrl+W', role: 'close' },
           { label: 'Minimize', accelerator: 'CmdOrCtrl+M', role: 'minimize' },
           { label: 'Zoom', role: 'zoom' },
